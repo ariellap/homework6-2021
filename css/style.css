@@ -40,3 +40,9 @@ a, a:hover, a:focus, a:active {
 div.card{
     flex-basis: 450px;
 }
+
+.gallery img{
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
