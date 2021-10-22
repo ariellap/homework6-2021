@@ -44,6 +44,7 @@ div.card{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: space-between;
     
     /* align-content: flex-start; */
 }
