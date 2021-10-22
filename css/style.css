@@ -7,7 +7,6 @@ body {
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -41,8 +40,30 @@ div.card{
     flex-basis: 450px;
 }
 
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .gallery img{
     border: 10px solid #50C7C7;
     margin: 10px;
     width: 300px;
+}
+
+@media screen and (min-width: 850px){
+    header{
+        /* display: flex;
+        justify-content: flex-start; */
+        position: fixed;
+    }
+
+    .nav_links{
+        
+    }
+
+
+
+
+
 }
