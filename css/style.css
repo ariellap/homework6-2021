@@ -16,9 +16,11 @@ a, a:hover, a:focus, a:active {
 }
 
 .nav_links{
+    display:flex;
     justify-content: space-around;
 
 }
+
 
 .card header{
     background-color: #288088;
@@ -34,9 +36,10 @@ a, a:hover, a:focus, a:active {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
-div.card{
+.card{
     flex-basis: 450px;
 }
 
@@ -45,7 +48,7 @@ div.card{
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-between;
-    
+
     /* align-content: flex-start; */
 }
 /* .logo {
@@ -68,13 +71,16 @@ div.card{
 
 @media screen and (min-width: 850px){
     header{
-        /* display: flex;
-        justify-content: flex-start; */
-        /* position: fixed; */
-    }
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;
+        top: 0;
+        position:sticky;
+    } 
 
     .nav_links{
-        
+        justify-content: flex-end;
     }
 
 
