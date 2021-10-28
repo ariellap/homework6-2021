@@ -1,3 +1,5 @@
+@media screen {
+
 body {
     font-family: 'Alegreya Sans SC', serif;
     background-image: url('../images/concrete_seamless.png');
@@ -10,15 +12,15 @@ header {
     align-items: center;
 }
 
-a, a:hover, a:focus, a:active {
-    text-decoration: none;
-    color: inherit;
+
+a:visited{
+    color:blue;
 }
 
 .nav_links{
     display:flex;
+    flex-flow: column wrap;
     justify-content: space-around;
-
 }
 
 
@@ -29,14 +31,15 @@ a, a:hover, a:focus, a:active {
     padding-bottom: 20px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    position: inherit;
 }
 
 .pricing{
     display: flex;
+    flex-flow: column wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
 }
 
 .card{
@@ -51,17 +54,16 @@ a, a:hover, a:focus, a:active {
 
     /* align-content: flex-start; */
 }
-/* .logo {
+#logo {
     animation-name: logo;
     animation-duration: 5s;
+    animation-iteration-count: 1;
 }
 
 @keyframes logo {
-    from {width: 50px;}
-    from {opacity: 0}
-    to {width: 425px;}
-    to {opacity: 1;}
-  } */
+    from {width: 50px; opacity: 0;}
+    to {width: 425px; opacity: 1;}
+  }
 
 .gallery img{
     border: 10px solid #50C7C7;
@@ -69,6 +71,7 @@ a, a:hover, a:focus, a:active {
     width: 300px;
 }
 
+}
 @media screen and (min-width: 850px){
     header{
         display: flex;
@@ -76,12 +79,27 @@ a, a:hover, a:focus, a:active {
         justify-content: space-between;
         width: 100%;
         top: 0;
+        left: 0;
         position:sticky;
     } 
 
     .nav_links{
-        justify-content: flex-end;
+        justify-content: space-between;
+        flex-flow: row wrap;
     }
+    
+    .pricing{
+        flex-direction: row;
+    }
+
+    .card{
+        flex-basis: 250px;
+    }
+
+    /* .card{
+        flex-flow: row wrap;
+        flex-basis: 250px;
+    } this isn't working right  */
 
 
 
@@ -104,4 +122,37 @@ a, a:hover, a:focus, a:active {
     header{
       background-attachment: initial;
     }
+  }
+
+  /* still to do- keyframe animation, card class flex wrap 
+  to match for larger screens, and reduced motion */
+
+  @media print{
+      body{
+        background-image: none;
+      }
+
+      nav{
+          display: flex;
+          justify-content: space-around;
+          flex-direction: row;
+      }
+
+      .nav_links{
+          justify-content: space-around;
+      }
+
+      .pricing{
+          display: flex;
+          align-items: flex-end;
+      }
+
+      .card{
+          border: solid 2px #45ADDD;
+          flex-basis: 250px;
+      }
+
+      .gallery{
+        display: none;
+      }
   }
