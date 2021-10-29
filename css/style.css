@@ -13,7 +13,7 @@ header {
 }
 
 
-a, a:visited{
+a:visited{
     color:blue;
 }
 
@@ -130,24 +130,21 @@ a, a:visited{
         background-image: none;
       }
 
-      header{
-        display: flex;
-      }
-
-      a:visited{
+      a, a:visited{
         color:blue;
     }
 
       nav{
+        display: flex;
         justify-content: center;
-        /* flex-direction: row; */
+        align-items: center;
       }
 
       .nav_links{
         display: flex;
         /* flex-wrap: wrap; */
         justify-content: space-around;
-        align-content: center;
+        align-content:center;
 
       }
 
